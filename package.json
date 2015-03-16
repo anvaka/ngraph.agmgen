@@ -1,0 +1,21 @@
+{
+  "name": "ngraph.agmgen",
+  "version": "0.1.0",
+  "description": "Graph generator based on affliation graph model (AGM)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "agm",
+    "ngraph",
+    "graph",
+    "generator"
+  ],
+  "author": "Andrei Kashcha",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anvaka/ngraph.agmgen"
+  }
+}
