@@ -1,14 +1,8 @@
 # ngraph.agmgen
 
-Graph generator based on affliation graph model (AGM)
+Graph generator based on affiliation graph model (AGM). Very early alpha.
 
-# install
-
-With [npm](https://npmjs.org) do:
-
-```
-npm install ngraph.agmgen
-```
+See http://cs.stanford.edu/people/jure/pubs/bigclam-wsdm13.pdf for more details.
 
 # license
 
