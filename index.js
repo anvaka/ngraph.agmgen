@@ -86,7 +86,7 @@ function ensureAffiliationWeightsInitialized(graph) {
 
     var communityNodeId = link.toId;
     var membersCount = graph.getLinks(communityNodeId).length;
-    // todo: probably power law would be better here
-    link.data = 1/membersCount;
+    // todo: let users configure scale and the coefficient
+    link.data = Math.pow(membersCount, -0.6) * 1.3;
   }
 }
