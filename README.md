@@ -93,7 +93,7 @@ strength = Math.pow(numberOfCommunityMembers, -coefficient) * scale;
 ```
 
 Here `coefficient` and `scale` can be passed in options as a second argument,
-and by default are having values `0.6` and `scale`:
+and by default are having values `0.6` and `1.3`:
 
 ``` js
 var graph = agm(affiliationGraph, {
