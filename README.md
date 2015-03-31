@@ -78,6 +78,46 @@ digraph G {
 }
 ```
 
+## advanced usage
+
+In the AGM, you can also explicitly specify the strength of a membership. That
+is how strongly a given member belongs to a community. The higher the strength
+the more likely it is for a member to have connections with other members of
+the community. By default `ngraph.agmgen` does not require you to specify strength
+for the affiliation graph. If you do not specify the strength, it is assumed
+that strength is equally distributed among community members, and its value will
+be:
+
+```
+strength = Math.pow(numberOfCommunityMembers, -coefficient) * scale;
+```
+
+Here `coefficient` and `scale` can be passed in options as a second argument,
+and by default are having values `0.6` and `scale`:
+
+``` js
+var graph = agm(affiliationGraph, {
+  coefficient: 0.6,
+  scale: 1.3
+});
+```
+
+Alternatively, if you want to have precise control over weights, you can pass
+them when creating affiliation graph:
+
+``` js
+var affiliationGraph = require('ngraph.graph')();
+// last argument is community weight:
+var heavyWeight = 10;
+affiliationGraph.addLink('user A', 'community B', heavyWeight);
+var noWeight = 0;
+affiliationGraph.addLink('user B', 'community B', noWeight);
+```
+
+Note: setting weight to 0 will prohibit AGM from building connections for this
+user within current community. It's same as just not including user into the
+community.
+
 install
 =======
 
