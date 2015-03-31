@@ -1,6 +1,6 @@
 {
   "name": "ngraph.agmgen",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Graph generator based on affiliation graph model (AGM)",
   "main": "index.js",
   "scripts": {
