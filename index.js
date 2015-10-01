@@ -130,7 +130,7 @@ function agm(affiliationGraph, options) {
     // at least one edge pointing towards nodeId we can guarantee it is
     // a community node
     var links = affiliationGraph.getLinks(nodeId);
-    return links.length === 0 || links[0].toId === nodeId;
+    return !links || links.length === 0 || links[0].toId === nodeId;
   }
 }
 
@@ -144,7 +144,11 @@ function ensureAffiliationWeightsInitialized(graph, options) {
     if (typeof link.data === 'number') return;
 
     var communityNodeId = link.toId;
-    var membersCount = graph.getLinks(communityNodeId).length;
+    var links = graph.getLinks(communityNodeId);
+    var membersCount = 0;
+    if (links) {
+      membersCount = links.length;
+    }
     link.data = Math.pow(membersCount, -coefficient) * scale;
   }
 }
