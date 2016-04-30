@@ -2,8 +2,13 @@
 
 Based on affiliation graph constructs a social graph.
 
-See also [Overlapping Community Detection at Scale](http://cs.stanford.edu/people/jure/pubs/bigclam-wsdm13.pdf)
-for more details.
+# See also
+
+* [Overlapping Community Detection at Scale](http://cs.stanford.edu/people/jure/pubs/bigclam-wsdm13.pdf)
+* [ngraph.cw](https://github.com/anvaka/ngraph.cw) - community detection based
+on label propagation
+* [ngraph.louvain](https://github.com/anvaka/ngraph.louvain) - community detection
+based on modularity optimization.
 
 # what?
 
@@ -117,6 +122,7 @@ affiliationGraph.addLink('user B', 'community B', noWeight);
 Note: setting weight to 0 will prohibit AGM from building connections for this
 user within current community. It's same as just not including user into the
 community.
+
 
 install
 =======
